@@ -10,6 +10,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
 
@@ -26,7 +27,8 @@ public class MainViewController {
         MenuItem help = new MenuItem("Help");
         MenuItem inspect = new MenuItem("Inspect");
         popup.getItems().addAll(help, inspect);
-
+        newItem.setAccelerator(KeyCombination.keyCombination("Ctrl+N"));
+        
         mainPane.setOnMouseClicked(e -> {
             if (e.getButton() == MouseButton.SECONDARY) {
                 popup.show(mainPane, e.getScreenX() - 50, e.getScreenY() - 25);

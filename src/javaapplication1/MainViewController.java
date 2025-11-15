@@ -81,7 +81,6 @@ public class MainViewController {
         closeItem.setDisable(true);
         openItem.setDisable(false);
         newItem.setDisable(false);
-
     }
 
     @FXML
@@ -92,8 +91,6 @@ public class MainViewController {
     @FXML
     void handleFind(ActionEvent event) {
         System.out.println("FIND has been pressed");
-        findItem.setDisable(true);
-        replaceItem.setDisable(false);
     }
 
     @FXML
@@ -123,8 +120,6 @@ public class MainViewController {
     @FXML
     void handleReplace(ActionEvent event) {
         System.out.println("REPLACE has been pressed");
-        replaceItem.setDisable(true);
-        findItem.setDisable(false);
     }
 
     @FXML
